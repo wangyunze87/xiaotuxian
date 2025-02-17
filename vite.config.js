@@ -19,8 +19,7 @@ export default defineConfig({
         //1.配置elemenmtpuls采用sass样式配色系统
         resolvers: [
 
-          ElementPlusResolver({importStyle:"sass"}),
-        ],
+          ElementPlusResolver({importStyle:"sass"})],
       }),
     vueDevTools(),
   ],
