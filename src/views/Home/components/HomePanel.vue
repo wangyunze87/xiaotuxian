@@ -4,9 +4,11 @@ defineProps({
   //主题
   title: {
     type: String,
+    default: "",
   },
   subTitle: {
     type: String,
+    default: "",
   },
 });
 </script>
