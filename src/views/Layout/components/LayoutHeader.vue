@@ -20,11 +20,18 @@ const categoryStore = useCategoryStore();
       <h1 class="logo">
         <RouterLink to="/">小兔鲜</RouterLink>
       </h1>
-      <ul class="app-header-nav">
+      <!-- <ul class="app-header-nav">             //大小写
         <li class="home" v-for="item in categoryStore.CategoryList" :key="item.id">
           <RouterLink to="/">{{ item.name }}</RouterLink>
         </li>
+      </ul> -->
+
+      <ul class="app-header-nav">
+        <li class="home" v-for="item in categoryStore.categoryList" :key="item.id">
+          <RouterLink to="/">{{ item.name }}</RouterLink>
+        </li>
       </ul>
+
       <div class="search">
         <i class="iconfont icon-search"></i>
         <input type="text" placeholder="搜一搜" />

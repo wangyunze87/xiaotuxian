@@ -14,8 +14,14 @@ const categoryStore = useCategoryStore();
     <div class="container">
       <RouterLink class="logo" to="/" />
       <!-- 导航区域 -->
-      <ul class="app-header-nav">
+      <!-- <ul class="app-header-nav">/             //大小写
         <li class="home" v-for="item in categoryStore.CategoryList" :key="item.id">
+          <RouterLink to="/">{{ item.name }}</RouterLink>
+        </li>
+      </ul> -->
+
+      <ul class="app-header-nav">
+        <li class="home" v-for="item in categoryStore.categoryList" :key="item.id">
           <RouterLink to="/">{{ item.name }}</RouterLink>
         </li>
       </ul>
