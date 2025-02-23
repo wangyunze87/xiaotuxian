@@ -1,4 +1,5 @@
  import '@/styles/common.scss'
+ import { componentPlugin } from '@/components'
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
@@ -17,9 +18,11 @@ getCategory().then(res=>{
   console.log(res)
 })
 
+
+
 //引入懒加载指令插件并注册
 const app = createApp(App)
-
+app.use(componentPlugin)
 app.use(createPinia())
 app.use(router)
 app.use(lazyPlugin)
